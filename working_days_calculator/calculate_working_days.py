@@ -9,7 +9,7 @@ def calculate_day(day1, month1, day2, month2) :
     result = result + day2 - day1
     return result + 1
 
-def holiday_day(month):
+def holi_day(month):
     days_in_month = [8, 10, 12, 11, 11, 12, 9, 12, 9, 9, 10, 10]
     if 1 <= month <= 12:
         return days_in_month[month - 1]
@@ -19,7 +19,7 @@ def holiday_day(month):
 def working_month(month1, month2) : 
     working_days = 0
     for month in range(month1, month2 + 1):
-        working_days += holiday_day(month)
+        working_days += holi_day(month)
     
     return working_days
 
